@@ -9,6 +9,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
 public class Login extends Frame implements ActionListener{
     
     public static void main(String[] args){
@@ -16,6 +18,7 @@ public class Login extends Frame implements ActionListener{
     }
     
     JTextField username;
+    JPasswordField password;
     JButton login;
     public Login(){
         JFrame f = new JFrame("Login Page");
@@ -32,7 +35,7 @@ public class Login extends Frame implements ActionListener{
         //TextField
         username = new JTextField();
         username.setBounds(150, 90, 150, 20);
-        JPasswordField password = new JPasswordField();
+        password = new JPasswordField(10);
         password.setBounds(150, 140, 150, 20);
         
         //Button
@@ -52,8 +55,48 @@ public class Login extends Frame implements ActionListener{
     public void actionPerformed (ActionEvent e){
         if(e.getSource() == login){
             int findUser = 0;
+            findUser = search(username.getText(), password.getText());
             
+            if(findUser == 0)
+            {
+                dispose();
+                new MainMenu();
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "Invalid Username and Password", "InfoBox: Login Error", JOptionPane.INFORMATION_MESSAGE);
+            }
         }
     }
     
+    private static int search(String username, String password){
+        String log;
+        log = "login.txt";
+        File login = new File(log);
+        
+        //if its true, return value 0
+        try
+        {
+            Scanner scan = new Scanner(login);
+            while(scan.hasNext())
+            {
+                String user = scan.nextLine();
+                String[] details = user.split(":");
+                String name = details[0];
+                String pass = details[1];
+                
+                if(name.equals(username)&&pass.equals(password))
+                {
+                    return 0;
+                }
+            }
+        }
+        catch(FileNotFoundException f)
+        {
+            f.printStackTrace();
+        }
+        
+        //if its false, return value 1
+        return 1;
+    }
 }
