@@ -60,18 +60,19 @@ public class Login extends Frame implements ActionListener{
             if(findUser == 0)
             {
                 dispose();
-                new MainMenu();
+                new AdminMainMenu();
             }
             else
             {
-                JOptionPane.showMessageDialog(null, "Invalid Username and Password", "InfoBox: Login Error", JOptionPane.INFORMATION_MESSAGE);
+                dispose();
+                new LecturerMainMenu();
             }
         }
     }
     
     private static int search(String username, String password){
         String log;
-        log = "login.txt";
+        log = "user.txt";
         File login = new File(log);
         
         //if its true, return value 0
