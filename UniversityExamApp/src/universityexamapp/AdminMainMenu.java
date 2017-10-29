@@ -8,7 +8,7 @@ package universityexamapp;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-public class AdminMainMenu extends Frame{
+public class AdminMainMenu extends Frame implements ActionListener{
     
     public static void main(String[] args){
         new AdminMainMenu();
@@ -18,6 +18,7 @@ public class AdminMainMenu extends Frame{
     public AdminMainMenu(){
         JFrame f = new JFrame("Main Menu");
         
+        //Button
         InsertUser = new Button("Add New User");
         EditUser = new Button("Modify Existing User Information");
         SearchUser = new Button("View User Information");
@@ -29,6 +30,19 @@ public class AdminMainMenu extends Frame{
         f.setLayout(new BoxLayout(f.getContentPane() ,BoxLayout.Y_AXIS));
         f.setVisible(true);
         f.setLocation(900, 300);
+        
+        //ActionListener
+        InsertUser.addActionListener(this);
+        EditUser.addActionListener(this);
+        SearchUser.addActionListener(this);
+        DeleteUser.addActionListener(this);
+        
     }
 
+    public void actionPerformed(ActionEvent e){
+        if(e.getSource() == InsertUser)
+        {
+            new RegisterUser();
+        }
+    }
 }
