@@ -17,16 +17,16 @@ public class Login extends Frame implements ActionListener{
         new Login();
     }
     
-    JTextField username;
-    JPasswordField password;
-    JButton login;
+    private JTextField username;
+    private JPasswordField password;
+    private JButton login;
     public Login(){
         JFrame f = new JFrame("Login Page");
         
         //Label
         JLabel title, user, pass;
-        title = new JLabel("Welcome to University Exam Application");
-        title.setBounds(80, 40, 300, 20);
+        title = new JLabel("Welcome to Trisyslogics Order Management System");
+        title.setBounds(45, 40, 300, 20);
         user = new JLabel("Username:");
         user.setBounds(80, 90, 150, 20);
         pass = new JLabel("Password:");
@@ -59,13 +59,19 @@ public class Login extends Frame implements ActionListener{
             
             if(findUser == 0)
             {
-                dispose();
                 new AdminMainMenu();
+            }
+            else if(findUser == 1)
+            {
+                new SMMainMenu();
+            }
+            else if(findUser == 2)
+            {
+                new PMMainMenu();
             }
             else
             {
-                dispose();
-                new LecturerMainMenu();
+                JOptionPane.showMessageDialog(null, "Invalid Username and Password!", "Login Error", JOptionPane.INFORMATION_MESSAGE);
             }
         }
     }
@@ -75,7 +81,7 @@ public class Login extends Frame implements ActionListener{
         log = "user.txt";
         File login = new File(log);
         
-        //if its true, return value 0
+        //return 0 for admin, return 1 for SM, return 2 for PM
         try
         {
             Scanner scan = new Scanner(login);
@@ -83,12 +89,21 @@ public class Login extends Frame implements ActionListener{
             {
                 String user = scan.nextLine();
                 String[] details = user.split(":");
-                String name = details[0];
-                String pass = details[1];
+                String name = details[1];
+                String pass = details[2];
+                String role = details[3];
                 
-                if(name.equals(username)&&pass.equals(password))
+                if(name.equals(username) && pass.equals(password) && role.equals("admin"))
                 {
                     return 0;
+                }
+                else if(name.equals(username) && pass.equals(password) && role.equals("Sales Manager"))
+                {
+                    return 1;
+                }
+                else if(name.equals(username) && pass.equals(password) && role.equals("Purchase Manager"))
+                {
+                    return 2;
                 }
             }
         }
@@ -97,7 +112,7 @@ public class Login extends Frame implements ActionListener{
             f.printStackTrace();
         }
         
-        //if its false, return value 1
-        return 1;
+        //if its false, return value -1
+        return -1;
     }
 }

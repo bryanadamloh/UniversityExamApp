@@ -5,17 +5,15 @@
  */
 package universityexamapp;
 
-
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
-public class StaffMainMenu extends Frame{
+import java.awt.event.*;
+import java.io.*;
+public class ItemEntry extends Frame{
     
     public static void main(String[] args){
-        new StaffMainMenu();
+        new ItemEntry();
     }
     
-    public StaffMainMenu(){
-        JFrame f = new JFrame("Main Menu");
-    }
+    
 }
