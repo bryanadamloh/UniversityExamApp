@@ -18,6 +18,7 @@ public class RegisterUser extends Frame implements ActionListener{
         new RegisterUser();
     }
     
+    String randomNum;
     JTextField username, password;
     JComboBox rolecb, modulecb;
     JButton submit;
@@ -62,6 +63,18 @@ public class RegisterUser extends Frame implements ActionListener{
         
         //add ActionListener
         submit.addActionListener(this);
+        rolecb.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                if("Staff".equals(rolecb.getSelectedItem()))
+                {
+                    modulecb.disable();
+                }
+                else
+                {
+                    modulecb.enable();
+                }
+            }
+        });
     }
     
     public void actionPerformed (ActionEvent e){
@@ -70,13 +83,21 @@ public class RegisterUser extends Frame implements ActionListener{
             try
             {
                 BufferedReader br = new BufferedReader(new FileReader("user.txt"));
-                if(br.readLine() != null)
+                if(br.readLine() != null && "Staff".equals(rolecb.getSelectedItem()))
                 {
-                    UserAdd();
+                    StaffAdd();
                     username.setText("");
                     password.setText("");
                     rolecb.setSelectedIndex(0);
                     modulecb.setSelectedIndex(0);
+                }
+                else if(br.readLine() != null && "Lecturer".equals(rolecb.getSelectedItem()))
+                {
+                   LecturerAdd();
+                   username.setText("");
+                   password.setText("");
+                   rolecb.setSelectedIndex(0);
+                   modulecb.setSelectedIndex(0);
                 }
                 
                 JOptionPane.showMessageDialog(null, "Registration has been made successfully!", "Info", JOptionPane.INFORMATION_MESSAGE);
@@ -88,9 +109,18 @@ public class RegisterUser extends Frame implements ActionListener{
         }
     }
     
-    public void UserAdd() throws IOException
+    public void StaffAdd() throws IOException
+    {
+        BufferedWriter bw = new BufferedWriter(new FileWriter("user.txt", true));
+        Random gen = new Random();
+        randomNum = String.format("S" + "%04d", gen.nextInt(9999));
+        
+        bw.write(randomNum + ":" + username.getText() + ":" + password.getText() + ":" + rolecb.getSelectedItem());
+        bw.close();
+    }
+    
+    public void LecturerAdd() throws IOException
     {
         
     }
-    
 }
