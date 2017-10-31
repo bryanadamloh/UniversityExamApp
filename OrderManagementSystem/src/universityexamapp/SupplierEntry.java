@@ -5,7 +5,15 @@
  */
 package universityexamapp;
 
-
-public class SupplierEntry {
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.io.*;
+public class SupplierEntry extends Frame{
+    
+    public static void main(String[] args){
+        new SupplierEntry();
+    }
+    
     
 }
