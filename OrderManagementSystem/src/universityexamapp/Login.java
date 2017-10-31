@@ -93,7 +93,7 @@ public class Login extends Frame implements ActionListener{
                 String pass = details[2];
                 String role = details[3];
                 
-                if(name.equals(username) && pass.equals(password) && role.equals("admin"))
+                if(name.equals(username) && pass.equals(password) && role.equals("Admin"))
                 {
                     return 0;
                 }

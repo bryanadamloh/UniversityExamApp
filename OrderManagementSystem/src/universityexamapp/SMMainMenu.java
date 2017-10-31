@@ -43,7 +43,10 @@ public class SMMainMenu extends Frame implements ActionListener{
     }
     
     public void actionPerformed(ActionEvent e){
-        
+        if(e.getSource() == ItemEntry)
+        {
+            new ItemEntry();
+        }
     }
             
 }

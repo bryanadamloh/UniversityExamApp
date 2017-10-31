@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Admin/Documents/GitHub/OrderManagementSystem/OrderManagementSystem/src/universityexamapp/SupplierEntry.java</file>
             <file>file:/C:/Users/Admin/Documents/GitHub/OrderManagementSystem/OrderManagementSystem/user.txt</file>
             <file>file:/C:/Users/Admin/Documents/GitHub/OrderManagementSystem/OrderManagementSystem/src/universityexamapp/AdminMainMenu.java</file>
@@ -11,6 +12,15 @@
             <file>file:/C:/Users/Admin/Documents/GitHub/OrderManagementSystem/OrderManagementSystem/src/universityexamapp/RegisterUser.java</file>
             <file>file:/C:/Users/Admin/Documents/GitHub/OrderManagementSystem/OrderManagementSystem/src/universityexamapp/Login.java</file>
             <file>file:/C:/Users/Admin/Documents/GitHub/OrderManagementSystem/OrderManagementSystem/src/universityexamapp/ItemEntry.java</file>
+=======
+            <file>file:/C:/Users/BOBO/Documents/GitHub/UniversityExamApp/OrderManagementSystem/src/universityexamapp/SMMainMenu.java</file>
+            <file>file:/C:/Users/BOBO/Documents/GitHub/UniversityExamApp/OrderManagementSystem/item.txt</file>
+            <file>file:/C:/Users/BOBO/Documents/GitHub/UniversityExamApp/OrderManagementSystem/src/universityexamapp/PMMainMenu.java</file>
+            <file>file:/C:/Users/BOBO/Documents/GitHub/UniversityExamApp/OrderManagementSystem/src/universityexamapp/RegisterUser.java</file>
+            <file>file:/C:/Users/BOBO/Documents/GitHub/UniversityExamApp/OrderManagementSystem/src/universityexamapp/SupplierEntry.java</file>
+            <file>file:/C:/Users/BOBO/Documents/GitHub/UniversityExamApp/OrderManagementSystem/src/universityexamapp/ItemEntry.java</file>
+            <file>file:/C:/Users/BOBO/Documents/GitHub/UniversityExamApp/OrderManagementSystem/src/universityexamapp/Login.java</file>
+>>>>>>> 35f63f8530fc00fa2b799881e911a50e78e7f6b9
         </group>
     </open-files>
 </project-private>
