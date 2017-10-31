@@ -47,6 +47,10 @@ public class SMMainMenu extends Frame implements ActionListener{
         {
             new ItemEntry();
         }
+        else if(e.getSource() == SupplyEntry)
+        {
+            new SupplierEntry();
+        }
     }
             
 }

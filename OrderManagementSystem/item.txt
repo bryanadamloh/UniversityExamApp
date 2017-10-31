@@ -1,0 +1,2 @@
+M001:Maggi Cup:RM2.60:S001
+M002:Milo:RM3.20:S002
