@@ -3,11 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Admin/Documents/GitHub/UniversityExamApp/UniversityExamApp/src/universityexamapp/AdminMainMenu.java</file>
-            <file>file:/C:/Users/Admin/Documents/GitHub/UniversityExamApp/UniversityExamApp/src/universityexamapp/LecturerMainMenu.java</file>
-            <file>file:/C:/Users/Admin/Documents/GitHub/UniversityExamApp/UniversityExamApp/src/universityexamapp/Login.java</file>
-            <file>file:/C:/Users/Admin/Documents/GitHub/UniversityExamApp/UniversityExamApp/src/universityexamapp/RegisterUser.java</file>
-            <file>file:/C:/Users/Admin/Documents/GitHub/UniversityExamApp/UniversityExamApp/src/universityexamapp/StaffMainMenu.java</file>
+            <file>file:/C:/Users/Admin/Documents/GitHub/OrderManagementSystem/OrderManagementSystem/src/universityexamapp/SupplierEntry.java</file>
+            <file>file:/C:/Users/Admin/Documents/GitHub/OrderManagementSystem/OrderManagementSystem/user.txt</file>
+            <file>file:/C:/Users/Admin/Documents/GitHub/OrderManagementSystem/OrderManagementSystem/src/universityexamapp/AdminMainMenu.java</file>
+            <file>file:/C:/Users/Admin/Documents/GitHub/OrderManagementSystem/OrderManagementSystem/src/universityexamapp/PMMainMenu.java</file>
+            <file>file:/C:/Users/Admin/Documents/GitHub/OrderManagementSystem/OrderManagementSystem/src/universityexamapp/SMMainMenu.java</file>
+            <file>file:/C:/Users/Admin/Documents/GitHub/OrderManagementSystem/OrderManagementSystem/src/universityexamapp/RegisterUser.java</file>
+            <file>file:/C:/Users/Admin/Documents/GitHub/OrderManagementSystem/OrderManagementSystem/src/universityexamapp/Login.java</file>
+            <file>file:/C:/Users/Admin/Documents/GitHub/OrderManagementSystem/OrderManagementSystem/src/universityexamapp/ItemEntry.java</file>
         </group>
     </open-files>
 </project-private>
