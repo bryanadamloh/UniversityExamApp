@@ -12,10 +12,10 @@ import java.io.*;
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
-public class SupplierEntry extends Frame implements ActionListener{
+public class RegisterSupplier extends Frame implements ActionListener{
     
     public static void main(String[] args){
-        new SupplierEntry();
+        new RegisterSupplier();
     }
     
     //For JComboBox Population
@@ -25,7 +25,7 @@ public class SupplierEntry extends Frame implements ActionListener{
     JTextField supplierID, supplierName;
     JComboBox itemCB;
     JButton submit;
-    public SupplierEntry(){
+    public RegisterSupplier(){
         
         //Populate the JComboBox with text file
         ReadFile();
@@ -34,7 +34,7 @@ public class SupplierEntry extends Frame implements ActionListener{
         JFrame f = new JFrame("Supplier Entry");
         
         //Label
-        JLabel title, ID, name, item, itemName;
+        JLabel title, ID, name, item;
         title = new JLabel("Register New Supplier");
         title.setBounds(125, 40, 300, 20);
         ID = new JLabel("Supplier ID:");

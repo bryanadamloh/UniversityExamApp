@@ -80,6 +80,7 @@ public class RegisterUser extends Frame implements ActionListener{
                 }
                 
                 JOptionPane.showMessageDialog(null, "Registration has been made successfully! Your ID is " + randomNum, "Info", JOptionPane.INFORMATION_MESSAGE);
+                br.close();
             }
             catch (IOException i)
             {

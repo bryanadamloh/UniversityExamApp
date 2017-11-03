@@ -45,11 +45,11 @@ public class SMMainMenu extends Frame implements ActionListener{
     public void actionPerformed(ActionEvent e){
         if(e.getSource() == ItemEntry)
         {
-            new ItemEntry();
+            new ItemMenu();
         }
         else if(e.getSource() == SupplyEntry)
         {
-            new SupplierEntry();
+            new RegisterSupplier();
         }
     }
             

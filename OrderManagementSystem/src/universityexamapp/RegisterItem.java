@@ -9,15 +9,15 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import java.io.*;
-public class ItemEntry extends Frame implements ActionListener{
+public class RegisterItem extends Frame implements ActionListener{
     
     public static void main(String[] args){
-        new ItemEntry();
+        new RegisterItem();
     }
     
     JTextField itemCode, itemName, priceItem, supplierID;
     JButton submit;
-    public ItemEntry(){
+    public RegisterItem(){
         JFrame f = new JFrame("Item Entry");
         
         //Label
