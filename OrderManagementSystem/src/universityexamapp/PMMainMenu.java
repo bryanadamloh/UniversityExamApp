@@ -11,10 +11,6 @@ import java.awt.event.*;
 import javax.swing.*;
 public class PMMainMenu extends Frame implements ActionListener{
     
-    public static void main(String[] args){
-        new PMMainMenu();
-    }
-    
     Button ItemList, SupplyList, RequisList, GeneratePO, POList;
     public PMMainMenu(){
         JFrame f = new JFrame("Main Menu");

@@ -10,17 +10,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.io.*;
 import java.util.Scanner;
-import java.util.List;
-import java.util.ArrayList;
 public class DeleteItem extends Frame implements ActionListener{
-    
-    public static void main(String[] args){
-        new DeleteItem();
-    }
-    
-    //JComboBox Population
-    List<String> itemInfo = new ArrayList<>();
-    File file = new File("item.txt");
     
     JLabel Name;
     JTextField itemID;
@@ -104,7 +94,7 @@ public class DeleteItem extends Frame implements ActionListener{
 
                 if(!itemID.getText().equals(ItemID))
                 {
-                    bw.write(item);
+                    bw.write(item + "\n");
                     bw.flush();
                 }
             }

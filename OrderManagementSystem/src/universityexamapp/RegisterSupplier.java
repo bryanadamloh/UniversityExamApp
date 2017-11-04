@@ -13,11 +13,7 @@ import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
 public class RegisterSupplier extends Frame implements ActionListener{
-    
-    public static void main(String[] args){
-        new RegisterSupplier();
-    }
-    
+
     //For JComboBox Population
     List<String> itemInfo = new ArrayList<>();
     File file = new File("item.txt");
@@ -100,13 +96,13 @@ public class RegisterSupplier extends Frame implements ActionListener{
     {
         PrintWriter pw = new PrintWriter("supplier.txt");
         pw.write(supplierID.getText() + ":" + supplierName.getText() + ":" + itemCB.getSelectedItem());
+        pw.println("\n");
         pw.close();
     }
     
     public void SupplierWrite() throws IOException
     {
         BufferedWriter bw = new BufferedWriter(new FileWriter("supplier.txt", true));
-        bw.newLine();
         bw.append(supplierID.getText() + ":" + supplierName.getText() + ":" + itemCB.getSelectedItem());
         bw.close();
     }

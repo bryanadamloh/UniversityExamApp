@@ -10,10 +10,6 @@ import java.awt.*;
 import java.awt.event.*;
 public class SMMainMenu extends Frame implements ActionListener{
     
-    public static void main(String[] args){
-        new SMMainMenu();
-    }
-    
     Button ItemEntry, SupplyEntry, DailySalesEntry, PurchaseRequis, DisplayRequis, POList;
     public SMMainMenu(){
         JFrame f = new JFrame("Main Menu");
@@ -49,7 +45,7 @@ public class SMMainMenu extends Frame implements ActionListener{
         }
         else if(e.getSource() == SupplyEntry)
         {
-            new RegisterSupplier();
+            new SupplierMenu();
         }
     }
             

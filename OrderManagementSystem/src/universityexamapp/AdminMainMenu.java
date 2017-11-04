@@ -10,10 +10,6 @@ import java.awt.*;
 import java.awt.event.*;
 public class AdminMainMenu extends Frame implements ActionListener{
     
-    public static void main(String[] args){
-        new AdminMainMenu();
-    }
-    
     Button InsertUser, EditUser, SearchUser, DeleteUser;
     public AdminMainMenu(){
         JFrame f = new JFrame("Main Menu");

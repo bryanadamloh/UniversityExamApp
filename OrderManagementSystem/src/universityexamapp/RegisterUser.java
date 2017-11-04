@@ -12,10 +12,6 @@ import java.util.Random;
 import java.io.*;
 public class RegisterUser extends Frame implements ActionListener{
     
-    public static void main(String[] args){
-        new RegisterUser();
-    }
-    
     String randomNum;
     JTextField username, password;
     JComboBox rolecb;

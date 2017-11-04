@@ -10,11 +10,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.io.*;
 public class RegisterItem extends Frame implements ActionListener{
-    
-    public static void main(String[] args){
-        new RegisterItem();
-    }
-    
+
     JTextField itemCode, itemName, priceItem, supplierID;
     JButton submit;
     public RegisterItem(){
@@ -95,13 +91,13 @@ public class RegisterItem extends Frame implements ActionListener{
     {
         PrintWriter pw = new PrintWriter("item.txt");
         pw.write(itemCode.getText() + ":" + itemName.getText() + ":" + priceItem.getText() + ":" + supplierID.getText());
+        pw.println("\n");
         pw.close();
     }
     
     public void ItemWrite() throws IOException
     {
         BufferedWriter bw = new BufferedWriter(new FileWriter("item.txt", true));
-        bw.newLine();
         bw.append(itemCode.getText() + ":" + itemName.getText() + ":" + priceItem.getText() + ":" + supplierID.getText());
         bw.close();
     }

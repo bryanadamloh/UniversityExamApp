@@ -10,10 +10,6 @@ import java.awt.*;
 import java.awt.event.*;
 public class ItemMenu extends Frame implements ActionListener {
     
-    public static void main(String[] args){
-        
-    }
-    
     Button newItem, editItem, deleteItem;
     public ItemMenu(){
         JFrame f = new JFrame("Item Entry");
