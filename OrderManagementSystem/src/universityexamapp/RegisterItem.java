@@ -79,6 +79,7 @@ public class RegisterItem extends Frame implements ActionListener{
                 }
                 
                 JOptionPane.showMessageDialog(null, "Item has been added successfully!", "Info", JOptionPane.INFORMATION_MESSAGE);
+                br.close();
             }
             catch (IOException i)
             {
@@ -91,13 +92,14 @@ public class RegisterItem extends Frame implements ActionListener{
     {
         PrintWriter pw = new PrintWriter("item.txt");
         pw.write(itemCode.getText() + ":" + itemName.getText() + ":" + priceItem.getText() + ":" + supplierID.getText());
-        pw.println("\n");
+        pw.println();
         pw.close();
     }
     
     public void ItemWrite() throws IOException
     {
         BufferedWriter bw = new BufferedWriter(new FileWriter("item.txt", true));
+        bw.newLine();
         bw.append(itemCode.getText() + ":" + itemName.getText() + ":" + priceItem.getText() + ":" + supplierID.getText());
         bw.close();
     }

@@ -107,6 +107,7 @@ public class RegisterSupplier extends Frame implements ActionListener{
                 }
                 
                 JOptionPane.showMessageDialog(null, "Supplier has been added successfully!", "Info", JOptionPane.INFORMATION_MESSAGE);
+                br.close();
             }
             catch (IOException i)
             {
@@ -150,8 +151,7 @@ public class RegisterSupplier extends Frame implements ActionListener{
         catch (IOException i)
         {
             i.printStackTrace();
-        }
-        
+        }  
     }
     
     public void searchIDforItem()
@@ -173,6 +173,8 @@ public class RegisterSupplier extends Frame implements ActionListener{
                 }
                 
             }
+            
+            scan.close();
         }
         catch (IOException i)
         {

@@ -36,6 +36,10 @@ public class ItemMenu extends Frame implements ActionListener {
         {
             new RegisterItem();
         }
+        else if(e.getSource() == editItem)
+        {
+            new ModifyItem();
+        }
         else if(e.getSource() == deleteItem)
         {
             new DeleteItem();

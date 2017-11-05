@@ -38,6 +38,10 @@ public class SupplierMenu extends Frame implements ActionListener{
         {
             new RegisterSupplier();
         }
+        else if(e.getSource() == editSupp)
+        {
+            new ModifySupplier();
+        }
         else if(e.getSource() == deleteSupp)
         {
             new DeleteSupplier();
